@@ -1,0 +1,98 @@
+{
+  "name": "grannepack-web-dev-settings",
+  "displayName": "GrannePack Web Dev Settings",
+  "description": "HTML-, CSS-, & SCSS-related settings & keyboard shortcuts for Scott Granneman’s Web Dev courses",
+  "version": "0.0.1",
+  "publisher": "granneman",
+  "author": {
+    "name": "Scott Granneman",
+    "email": "scott@granneman.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.62.0"
+  },
+  "icon": "images/grannepack-web-dev-settings.png",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "keywords": [
+    "html",
+    "css",
+    "scss",
+    "granneman",
+    "grannepack",
+    "teaching",
+    "settings",
+    "keyboard",
+    "shortcuts"
+  ],
+  "galleryBanner": {
+    "color": "#4a525a",
+    "theme": "dark"
+  },
+  "repository": {
+    "url": "https://github.com/rsgranne/grannepack-web-dev-snippets"
+  },
+  "homepage": "https://github.com/rsgranne/grannepack-web-dev-snippets",
+  "bugs": {
+    "url": "https://github.com/rsgranne/grannepack-web-dev-snippets/issues"
+  },
+  "contributes": {
+    "keybindings": [
+      {
+        "command": "editor.action.joinLines",
+        "key": "ctrl+j",
+        "when": "editorTextFocus && !editorReadonly"
+      },
+      {
+        "command": "editor.emmet.action.balanceIn",
+        "key": "ctrl+e ctrl+DownArrow",
+        "when": "editorTextFocus && !editorReadonly",
+        "mac": "cmd+e cmd+DownArrow"
+      },
+      {
+        "command": "editor.emmet.action.balanceOut",
+        "key": "ctrl+e ctrl+UpArrow",
+        "when": "editorTextFocus && !editorReadonly",
+        "mac": "cmd+e cmd+UpArrow"
+      },
+      {
+        "command": "editor.emmet.action.updateImageSize",
+        "key": "ctrl+e ctrl+i",
+        "when": "editorTextFocus && !editorReadonly",
+        "mac": "cmd+e cmd+i"
+      },
+      {
+        "command": "editor.emmet.action.wrapWithAbbreviation",
+        "key": "ctrl+e ctrl+r",
+        "when": "editorTextFocus && !editorReadonly",
+        "mac": "cmd+e cmd+r"
+      },
+      {
+        "command": "workbench.action.togglePanel",
+        "key": "ctrl+alt+j",
+        "when": "editorTextFocus && !editorReadonly",
+        "mac": "ctrl+option+j"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.2",
+    "vscode": "^1.1.37",
+    "tslint": "^7.0.0",
+    "@types/node": "^14.0.0",
+    "@types/mocha": "^9.0.0"
+  }
+}
